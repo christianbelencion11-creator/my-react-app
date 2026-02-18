@@ -1,11 +1,121 @@
-/* Additional Designs */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Home Page */
+/* GLOBAL LAYOUT FIX */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ROOT FIX (important for Vercel) */
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* MAIN WRAPPER */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  padding: 40px 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* CONTAINER FIX */
+.container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* SECTION TITLE */
+.section-title {
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* TEXT STYLES */
+.display-4 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+h5 {
+  color: #007bff;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* LIST GROUP */
+.list-group-item {
+  border: none;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  color: #555;
+  transition: 0.3s;
+}
+
+.list-group-item:hover {
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+/* FEATURE BOX */
 .feature-box {
   background: #f8f9fa;
   border-radius: 10px;
   transition: all 0.3s;
   border: 1px solid transparent;
+  padding: 1.5rem;
 }
 
 .feature-box:hover {
@@ -15,7 +125,7 @@
   box-shadow: 0 5px 15px rgba(0,123,255,0.1);
 }
 
-/* About Page */
+/* PROFILE IMAGE PLACEHOLDER */
 .profile-image-placeholder {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 50%;
@@ -27,9 +137,11 @@
   justify-content: center;
 }
 
+/* HOBBY ITEM */
 .hobby-item {
   background: #f8f9fa;
   border-radius: 10px;
+  padding: 1rem;
   transition: all 0.3s;
 }
 
@@ -43,13 +155,15 @@
   color: white !important;
 }
 
-/* Skills Page */
+/* SKILLS */
 .progress {
   background-color: #e9ecef;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .progress-bar {
+  border-radius: 10px;
   transition: width 1s ease;
   position: relative;
   overflow: hidden;
@@ -58,23 +172,21 @@
 .progress-bar::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
   animation: shimmer 2s infinite;
 }
 
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+/* CONTACT */
+.form-label {
+  font-weight: 600;
+  color: #555;
 }
 
-/* Contact Page */
 .form-control {
   border-radius: 8px;
   border: 1px solid #ddd;
+  padding: 0.75rem;
   transition: all 0.3s;
 }
 
@@ -86,26 +198,12 @@
 .btn-primary {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
+  padding: 0.75rem;
+  font-weight: 600;
+  border-radius: 8px;
   position: relative;
   overflow: hidden;
-}
-
-.btn-primary::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.3);
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s;
-}
-
-.btn-primary:hover::after {
-  width: 300px;
-  height: 300px;
+  transition: 0.3s;
 }
 
 .btn-primary:hover {
@@ -113,18 +211,46 @@
   box-shadow: 0 5px 15px rgba(102,126,234,0.4);
 }
 
-/* Badge Styles */
+/* BADGE */
 .badge {
   font-size: 0.9rem;
   letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
 }
 
-/* Card Hover Effect */
-.profile-card {
-  transition: all 0.3s;
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.profile-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 1.5rem;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
 }
