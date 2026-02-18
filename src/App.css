@@ -10,29 +10,21 @@ body {
   min-height: 100vh;
 }
 
-/* CENTER EVERYTHING */
+/* CENTER MAIN CONTAINER ONLY */
 .container {
   max-width: 1200px;
-  margin: 0 auto !important;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
   width: 100%;
 }
 
-/* Center all rows */
-.row {
-  justify-content: center !important;
-  margin: 0 auto;
-  width: 100%;
-}
+/* IMPORTANT: DO NOT TOUCH BOOTSTRAP COLUMNS */
+/* REMOVE this completely:
+[class*="col-"] { ... }
+*/
 
-/* Center all columns */
-[class*="col-"] {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-/* Profile Card - PERFECTLY CENTERED */
+/* Profile Card - CENTERED */
 .profile-card {
   background: white;
   border-radius: 20px;
@@ -45,12 +37,7 @@ body {
   text-align: center;
 }
 
-/* Center all text */
-h1, h2, h3, h4, h5, h6, p, div, span {
-  text-align: center;
-}
-
-/* Section Title - CENTERED */
+/* Section Title */
 .section-title {
   color: #667eea;
   margin: 0 auto 2rem;
@@ -59,23 +46,21 @@ h1, h2, h3, h4, h5, h6, p, div, span {
   text-align: center;
   position: relative;
   display: inline-block;
-  width: auto;
 }
 
 .section-title::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100px;
   height: 3px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 2px;
 }
 
-/* Home Page */
+/* Home */
 .display-4 {
   color: #333;
   font-weight: bold;
@@ -100,11 +85,9 @@ h1, h2, h3, h4, h5, h6, p, div, span {
   text-align: center;
   transition: all 0.3s;
   border: 1px solid transparent;
-  margin: 0 auto;
-  width: 100%;
 }
 
-/* About Page */
+/* About */
 .profile-image-placeholder {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 50%;
@@ -126,11 +109,9 @@ h1, h2, h3, h4, h5, h6, p, div, span {
   text-align: center;
   transition: all 0.3s;
   border: 1px solid transparent;
-  margin: 0 auto;
-  width: 100%;
 }
 
-/* Skills Page */
+/* Skills */
 .progress-container {
   max-width: 800px;
   margin: 0 auto;
@@ -150,10 +131,9 @@ h1, h2, h3, h4, h5, h6, p, div, span {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-  width: 100%;
 }
 
-/* Contact Page */
+/* Contact */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -166,7 +146,6 @@ h1, h2, h3, h4, h5, h6, p, div, span {
   padding: 0.75rem;
   transition: all 0.3s;
   width: 100%;
-  margin: 0 auto;
 }
 
 .form-label {
@@ -174,7 +153,6 @@ h1, h2, h3, h4, h5, h6, p, div, span {
   color: #555;
   text-align: left;
   display: block;
-  width: 100%;
 }
 
 .btn-primary {
@@ -184,18 +162,15 @@ h1, h2, h3, h4, h5, h6, p, div, span {
   font-weight: bold;
   border-radius: 10px;
   transition: all 0.3s;
-  width: 100%;
   max-width: 300px;
+  display: block;
   margin: 1rem auto;
 }
 
-/* Lists - Center but keep text left */
+/* Lists */
 .list-unstyled, .list-group {
-  text-align: left;
-  display: inline-block;
   margin: 0 auto;
-  width: auto;
-  min-width: 250px;
+  max-width: 400px;
 }
 
 .list-unstyled li, .list-group-item {
@@ -212,14 +187,6 @@ h1, h2, h3, h4, h5, h6, p, div, span {
   border: none;
   margin: 0 auto 1.5rem;
   display: inline-block;
-  width: auto;
-}
-
-/* Center all buttons */
-.button-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 /* Responsive */
@@ -241,9 +208,5 @@ h1, h2, h3, h4, h5, h6, p, div, span {
     width: 150px;
     height: 150px;
     font-size: 4rem;
-  }
-  
-  .list-unstyled, .list-group {
-    min-width: 200px;
   }
 }
