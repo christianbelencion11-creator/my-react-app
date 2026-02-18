@@ -12,9 +12,11 @@ function App() {
     <Router>
       <div className="App">
         {/* Navigation Bar */}
-        <Navbar bg="primary" data-bs-theme="dark" expand="lg" fixed="top">
+        <Navbar bg="primary" data-bs-theme="dark" expand="lg" fixed="top" className="shadow">
           <Container>
-            <Navbar.Brand as={Link} to="/">Christian's Profile</Navbar.Brand>
+            <Navbar.Brand as={Link} to="/" className="fw-bold">
+              👨‍💻 Christian's Profile
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">

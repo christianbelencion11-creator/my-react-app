@@ -3,11 +3,11 @@ import { Container, Row, Col, Card, Badge, ProgressBar } from 'react-bootstrap'
 
 function Skills() {
   const skills = [
-    { name: 'JavaScript', level: 75, color: 'warning', icon: '⚡' },
-    { name: 'React', level: 70, color: 'info', icon: '⚛️' },
-    { name: 'HTML/CSS', level: 85, color: 'danger', icon: '🎨' },
-    { name: 'Node.js', level: 60, color: 'success', icon: '🚀' },
-    { name: 'Python', level: 65, color: 'primary', icon: '🐍' }
+    { name: 'JavaScript', level: 75, icon: '⚡' },
+    { name: 'React', level: 70, icon: '⚛️' },
+    { name: 'HTML/CSS', level: 85, icon: '🎨' },
+    { name: 'Node.js', level: 60, icon: '🚀' },
+    { name: 'Python', level: 65, icon: '🐍' }
   ]
 
   return (
@@ -17,42 +17,40 @@ function Skills() {
           <Card className="profile-card border-0">
             <Card.Body className="p-4">
               <div className="text-center mb-4">
-                <Badge bg="primary" className="px-3 py-2">My Expertise</Badge>
+                <Badge bg="primary" className="px-4 py-2">MY SKILLS</Badge>
               </div>
               
-              <h2 className="section-title text-center mb-4">Technical Skills</h2>
+              <h2 className="section-title mb-5">Technical Expertise</h2>
               
               <Row className="mb-5">
-                {skills.map((skill, index) => (
-                  <Col md={12} key={index} className="mb-4">
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="fs-4 me-2">{skill.icon}</span>
-                      <strong className="flex-grow-1">{skill.name}</strong>
-                      <Badge bg={skill.color} className="px-3 py-2">{skill.level}%</Badge>
+                <Col md={8} className="mx-auto">
+                  {skills.map((skill, index) => (
+                    <div key={index} className="mb-4">
+                      <div className="d-flex align-items-center mb-2">
+                        <span className="skill-icon">{skill.icon}</span>
+                        <strong className="flex-grow-1">{skill.name}</strong>
+                        <Badge bg="primary" className="px-3 py-2">{skill.level}%</Badge>
+                      </div>
+                      <ProgressBar now={skill.level} />
                     </div>
-                    <ProgressBar 
-                      now={skill.level} 
-                      variant={skill.color}
-                      style={{ height: '12px', borderRadius: '10px' }}
-                    />
-                  </Col>
-                ))}
+                  ))}
+                </Col>
               </Row>
 
-              <h5 className="text-primary mb-3">📋 Other Skills & Tools</h5>
+              <h5 className="text-primary mb-4 text-center">Other Skills & Tools</h5>
               <Row>
                 <Col md={6}>
                   <ul className="list-unstyled">
-                    <li className="mb-2">✅ Git & GitHub</li>
-                    <li className="mb-2">✅ Bootstrap & React-Bootstrap</li>
-                    <li className="mb-2">✅ REST APIs</li>
+                    <li className="mb-3">✅ Git & GitHub</li>
+                    <li className="mb-3">✅ Bootstrap & React-Bootstrap</li>
+                    <li className="mb-3">✅ REST APIs</li>
                   </ul>
                 </Col>
                 <Col md={6}>
                   <ul className="list-unstyled">
-                    <li className="mb-2">✅ Database Management (MySQL)</li>
-                    <li className="mb-2">✅ Problem Solving</li>
-                    <li className="mb-2">✅ Team Collaboration</li>
+                    <li className="mb-3">✅ MySQL Database</li>
+                    <li className="mb-3">✅ Problem Solving</li>
+                    <li className="mb-3">✅ Team Collaboration</li>
                   </ul>
                 </Col>
               </Row>
@@ -63,5 +61,5 @@ function Skills() {
     </Container>
   )
 }
-s
+
 export default Skills
