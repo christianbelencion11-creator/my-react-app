@@ -5,12 +5,8 @@
 }
 
 body {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   overflow-x: hidden;
-}
-
-.App {
-  position: relative;
 }
 
 /* Navigation Bar */
@@ -18,9 +14,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
@@ -36,9 +31,7 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #667eea;
 }
 
 .nav-menu {
@@ -50,8 +43,6 @@ body {
 .nav-menu a {
   text-decoration: none;
   color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
 }
 
 .nav-menu a:hover {
@@ -62,25 +53,21 @@ body {
 .hero {
   min-height: 100vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  padding-top: 60px;
+  padding: 80px 20px 0;
 }
 
 .hero-content {
   max-width: 800px;
-  padding: 2rem;
-  animation: fadeInUp 1s ease;
 }
 
-.glow {
+h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .hero-subtitle {
@@ -105,20 +92,13 @@ body {
   padding: 1rem 2rem;
   font-size: 1.1rem;
   border: none;
-  border-radius: 50px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s;
-  font-weight: 600;
 }
 
 .hero-buttons .btn-primary {
   background: white;
   color: #667eea;
-}
-
-.hero-buttons .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hero-buttons .btn-secondary {
@@ -127,249 +107,13 @@ body {
   border: 2px solid white;
 }
 
-.hero-buttons .btn-secondary:hover {
-  background: white;
-  color: #667eea;
-  transform: translateY(-3px);
-}
-
-.hero-wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  line-height: 0;
-}
-
-/* Counter Section */
-.counter-section {
-  padding: 5rem 0;
-  background: #f8f9fa;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #333;
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 2px;
-}
-
-.counter-card {
-  background: white;
-  border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.counter-display {
-  margin-bottom: 2rem;
-}
-
-.counter-label {
-  font-size: 1.2rem;
-  color: #666;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.counter-value {
-  font-size: 5rem;
-  font-weight: bold;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.counter-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.counter-btn {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-}
-
-.counter-btn span {
-  font-size: 1.2rem;
-}
-
-.increment {
-  background: #4CAF50;
-  color: white;
-}
-
-.increment:hover {
-  background: #45a049;
-  transform: translateY(-2px);
-}
-
-.decrement {
-  background: #f44336;
-  color: white;
-}
-
-.decrement:hover {
-  background: #da190b;
-  transform: translateY(-2px);
-}
-
-.reset {
-  background: #ff9800;
-  color: white;
-}
-
-.reset:hover {
-  background: #e68900;
-  transform: translateY(-2px);
-}
-
-/* Features Section */
-.features-section {
-  padding: 5rem 0;
-  background: white;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.feature-card {
-  text-align: center;
-  padding: 2rem;
-  border-radius: 15px;
-  background: #f8f9fa;
-  transition: all 0.3s;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.feature-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.feature-card p {
-  color: #666;
-  line-height: 1.6;
-}
-
-/* Projects Section */
-.projects-section {
-  padding: 5rem 0;
-  background: #f8f9fa;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.project-card h3 {
-  padding: 1rem 1rem 0.5rem;
-  color: #333;
-}
-
-.project-card p {
-  padding: 0 1rem 1.5rem;
-  color: #666;
-}
-
-/* Footer */
-.footer {
-  background: #333;
-  color: white;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.footer p {
-  margin: 0.5rem 0;
-  opacity: 0.9;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
   }
   
-  .glow {
+  h1 {
     font-size: 2.5rem;
   }
   
@@ -378,18 +122,6 @@ body {
   }
   
   .hero-buttons {
-    flex-direction: column;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .counter-value {
-    font-size: 3rem;
-  }
-  
-  .counter-buttons {
     flex-direction: column;
   }
 }
