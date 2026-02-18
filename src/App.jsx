@@ -22,7 +22,7 @@ function App() {
       {/* Hero Section */}
       <section className="hero" id="home">
         <div className="hero-content">
-          <h1 className="glow">Hello, Vercel! 👋</h1>
+          <h1>Hello, Vercel! 👋</h1>
           <p className="hero-subtitle">My first React app deployed on Vercel</p>
           <p className="hero-name">Made with ❤️ by Christian</p>
           <div className="hero-buttons">
@@ -43,13 +43,13 @@ function App() {
             </div>
             <div className="counter-buttons">
               <button onClick={() => setCount(count + 1)} className="counter-btn increment">
-                <span>+</span> Increase
+                + Increase
               </button>
               <button onClick={() => setCount(count - 1)} className="counter-btn decrement">
-                <span>-</span> Decrease
+                - Decrease
               </button>
               <button onClick={() => setCount(0)} className="counter-btn reset">
-                <span>↺</span> Reset
+                ↺ Reset
               </button>
             </div>
           </div>
