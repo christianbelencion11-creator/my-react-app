@@ -26,18 +26,9 @@ function App() {
           <p className="hero-subtitle">My first React app deployed on Vercel</p>
           <p className="hero-name">Made with ❤️ by Christian</p>
           <div className="hero-buttons">
-            <button className="btn-primary" onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}>
-              View Projects
-            </button>
-            <button className="btn-secondary" onClick={() => window.open('https://github.com/christianbelencion11-creator', '_blank')}>
-              GitHub Profile
-            </button>
+            <button className="btn-primary">View Projects</button>
+            <button className="btn-secondary">GitHub Profile</button>
           </div>
-        </div>
-        <div className="hero-wave">
-          <svg viewBox="0 0 1440 320">
-            <path fill="white" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
         </div>
       </section>
 
