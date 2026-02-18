@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Card, Form, Button, Alert } from 'react-bootstrap'
-import SubmissionSuccess from './SubmissionSuccess'
+import SubmissionSuccess from '../SubmissionSuccess'
 
 function Contact() {
   const [formData, setFormData] = useState({
