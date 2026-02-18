@@ -1,15 +1,130 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
+/* Additional Designs */
 
-  display: flex;
-  flex-direction: column;
+/* Home Page */
+.feature-box {
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
 }
 
-main {
-  flex: 1;
+.feature-box:hover {
+  background: white;
+  border-color: #007bff;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,123,255,0.1);
+}
+
+/* About Page */
+.profile-image-placeholder {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.hobby-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.hobby-item:hover {
+  background: #007bff;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.hobby-item:hover small {
+  color: white !important;
+}
+
+/* Skills Page */
+.progress {
+  background-color: #e9ecef;
+  overflow: hidden;
+}
+
+.progress-bar {
+  transition: width 1s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Contact Page */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.btn-primary:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102,126,234,0.4);
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* Card Hover Effect */
+.profile-card {
+  transition: all 0.3s;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
 }
