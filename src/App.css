@@ -10,29 +10,187 @@ body {
   min-height: 100vh;
 }
 
-/* Custom Styles */
+/* Navigation Bar */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Main Content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Profile Card */
 .profile-card {
   background: white;
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  margin: 1rem 0;
+  margin: 2rem 0;
+  border: none;
+  transition: transform 0.3s ease;
 }
 
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Title */
 .section-title {
   color: #007bff;
   margin-bottom: 1.5rem;
   border-bottom: 3px solid #007bff;
   padding-bottom: 0.5rem;
+  font-weight: bold;
 }
 
-/* Responsive adjustments */
+/* Home Page */
+.display-4 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* About Page */
+h5 {
+  color: #007bff;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.list-group-item {
+  border: none;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #555;
+}
+
+.list-group-item:hover {
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+/* Skills Page */
+.progress {
+  border-radius: 10px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Contact Form */
+.form-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.btn-primary {
+  background: #007bff;
+  border: none;
+  padding: 0.75rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+}
+
+/* Alert */
+.alert {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Submission Success Page */
+.text-success {
+  color: #28a745 !important;
+}
+
+.bg-light {
+  background: #f8f9fa !important;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .profile-card {
-    padding: 1rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
   }
   
   h1 {
     font-size: 2rem;
   }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-card {
+  animation: fadeIn 0.5s ease;
 }
