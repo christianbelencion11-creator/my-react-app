@@ -15,21 +15,18 @@ function Skills() {
       maxWidth: '1200px',
       margin: '0 auto',
       padding: '20px',
-      width: '100%',
-      border: '2px solid red' // PARA MAKITA ANG CONTAINER
+      width: '100%'
     },
     row: {
       display: 'flex',
       justifyContent: 'center',
       margin: '0 auto',
-      width: '100%',
-      border: '2px solid blue' // PARA MAKITA ANG ROW
+      width: '100%'
     },
     col: {
       display: 'flex',
       justifyContent: 'center',
-      width: '100%',
-      border: '2px solid green' // PARA MAKITA ANG COLUMN
+      width: '100%'
     },
     card: {
       background: 'white',
@@ -37,15 +34,14 @@ function Skills() {
       padding: '2.5rem',
       boxShadow: '0 20px 50px rgba(0,0,0,0.2)',
       margin: '2rem auto',
-      border: '2px solid orange', // PARA MAKITA ANG CARD
+      border: 'none',
       width: '100%',
       maxWidth: '900px',
       textAlign: 'center'
     },
     badgeContainer: {
       textAlign: 'center',
-      marginBottom: '2rem',
-      border: '2px solid purple' // PARA MAKITA ANG BADGE CONTAINER
+      marginBottom: '2rem'
     },
     badge: {
       fontSize: '1rem',
@@ -55,13 +51,11 @@ function Skills() {
       border: 'none',
       display: 'inline-block',
       color: 'white',
-      fontWeight: 'bold',
-      border: '2px solid pink' // PARA MAKITA ANG BADGE
+      fontWeight: 'bold'
     },
     titleContainer: {
       textAlign: 'center',
-      marginBottom: '2rem',
-      border: '2px solid brown' // PARA MAKITA ANG TITLE CONTAINER
+      marginBottom: '2rem'
     },
     sectionTitle: {
       color: '#667eea',
@@ -71,33 +65,28 @@ function Skills() {
       paddingBottom: '1rem',
       textAlign: 'center',
       position: 'relative',
-      display: 'inline-block',
-      border: '2px solid cyan' // PARA MAKITA ANG TITLE
+      display: 'inline-block'
     },
     skillsContainer: {
       maxWidth: '700px',
       margin: '0 auto',
-      width: '100%',
-      border: '2px solid yellow' // PARA MAKITA ANG SKILLS CONTAINER
+      width: '100%'
     },
     skillItem: {
       marginBottom: '2rem',
-      width: '100%',
-      border: '2px solid gray' // PARA MAKITA ANG SKILL ITEM
+      width: '100%'
     },
     skillHeader: {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
       marginBottom: '0.5rem',
-      width: '100%',
-      border: '2px solid lightblue' // PARA MAKITA ANG SKILL HEADER
+      width: '100%'
     },
     skillName: {
       display: 'flex',
       alignItems: 'center',
-      gap: '0.5rem',
-      border: '2px solid lightgreen' // PARA MAKITA ANG SKILL NAME
+      gap: '0.5rem'
     },
     skillBadge: {
       background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -105,39 +94,34 @@ function Skills() {
       padding: '0.4rem 1rem',
       borderRadius: '20px',
       fontSize: '0.9rem',
-      fontWeight: 'bold',
-      border: '2px solid red' // PARA MAKITA ANG SKILL BADGE
+      fontWeight: 'bold'
     },
     progress: {
       height: '12px',
       borderRadius: '10px',
       backgroundColor: '#e9ecef',
       width: '100%',
-      margin: '0.5rem 0',
-      border: '2px solid darkblue' // PARA MAKITA ANG PROGRESS
+      margin: '0.5rem 0'
     },
     otherSkillsTitle: {
       color: '#667eea',
       fontSize: '1.3rem',
       fontWeight: 'bold',
       margin: '2rem 0 1.5rem',
-      textAlign: 'center',
-      border: '2px solid violet' // PARA MAKITA ANG OTHER SKILLS TITLE
+      textAlign: 'center'
     },
     listContainer: {
       display: 'flex',
       justifyContent: 'center',
       gap: '2rem',
-      flexWrap: 'wrap',
-      border: '2px solid gold' // PARA MAKITA ANG LIST CONTAINER
+      flexWrap: 'wrap'
     },
     list: {
       textAlign: 'left',
       listStyle: 'none',
       padding: 0,
       margin: 0,
-      minWidth: '250px',
-      border: '2px solid silver' // PARA MAKITA ANG LIST
+      minWidth: '250px'
     },
     listItem: {
       marginBottom: '1rem',
@@ -145,16 +129,15 @@ function Skills() {
       color: '#555',
       display: 'flex',
       alignItems: 'center',
-      gap: '0.5rem',
-      border: '2px solid bronze' // PARA MAKITA ANG LIST ITEM
+      gap: '0.5rem'
     }
   }
 
   return (
     <Container style={styles.container}>
-      <Row style={styles.row} className="justify-content-center">
+      <Row style={styles.row}>
         <Col md={10} style={styles.col}>
-          <Card style={styles.card} className="border-0">
+          <Card style={styles.card}>
             <Card.Body>
               {/* Badge */}
               <div style={styles.badgeContainer}>
