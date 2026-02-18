@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Card, Badge, ProgressBar } from 'react-bootstrap'
+import { Container, Row, Col, Card } from 'react-bootstrap'
 
 function Skills() {
   const skills = [
@@ -10,200 +10,210 @@ function Skills() {
     { name: 'Python', level: 65, icon: '🐍' }
   ]
 
+  // DIRECT INLINE STYLES - 100% CENTERED
   const styles = {
-    container: {
-      maxWidth: '1200px',
-      margin: '0 auto',
+    pageContainer: {
+      width: '100%',
+      minHeight: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
       padding: '20px',
-      width: '100%'
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
     },
-    row: {
-      display: 'flex',
-      justifyContent: 'center',
-      margin: '0 auto',
-      width: '100%'
-    },
-    col: {
-      display: 'flex',
-      justifyContent: 'center',
-      width: '100%'
-    },
-    card: {
-      background: 'white',
-      borderRadius: '20px',
-      padding: '2.5rem',
-      boxShadow: '0 20px 50px rgba(0,0,0,0.2)',
-      margin: '2rem auto',
-      border: 'none',
+    mainCard: {
       width: '100%',
       maxWidth: '900px',
-      textAlign: 'center'
+      background: 'white',
+      borderRadius: '20px',
+      padding: '40px',
+      boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+      margin: '20px auto'
     },
     badgeContainer: {
       textAlign: 'center',
-      marginBottom: '2rem'
+      marginBottom: '30px'
     },
     badge: {
-      fontSize: '1rem',
-      padding: '0.6rem 1.8rem',
-      borderRadius: '50px',
       background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      border: 'none',
-      display: 'inline-block',
       color: 'white',
-      fontWeight: 'bold'
-    },
-    titleContainer: {
-      textAlign: 'center',
-      marginBottom: '2rem'
-    },
-    sectionTitle: {
-      color: '#667eea',
-      fontSize: '2.5rem',
+      padding: '8px 25px',
+      borderRadius: '50px',
+      fontSize: '1rem',
       fontWeight: 'bold',
-      margin: '0 auto',
-      paddingBottom: '1rem',
-      textAlign: 'center',
-      position: 'relative',
-      display: 'inline-block'
+      display: 'inline-block',
+      letterSpacing: '1px'
     },
-    skillsContainer: {
-      maxWidth: '700px',
+    title: {
+      textAlign: 'center',
+      color: '#333',
+      fontSize: '2.2rem',
+      fontWeight: 'bold',
+      marginBottom: '40px',
+      position: 'relative',
+      paddingBottom: '15px'
+    },
+    titleUnderline: {
+      position: 'absolute',
+      bottom: 0,
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: '80px',
+      height: '4px',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      borderRadius: '2px'
+    },
+    skillsWrapper: {
+      maxWidth: '600px',
       margin: '0 auto',
       width: '100%'
     },
     skillItem: {
-      marginBottom: '2rem',
+      marginBottom: '25px',
       width: '100%'
     },
     skillHeader: {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      marginBottom: '0.5rem',
-      width: '100%'
+      marginBottom: '8px'
     },
-    skillName: {
+    skillLeft: {
       display: 'flex',
       alignItems: 'center',
-      gap: '0.5rem'
+      gap: '10px'
     },
-    skillBadge: {
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    skillIcon: {
+      fontSize: '1.5rem'
+    },
+    skillName: {
+      fontSize: '1.1rem',
+      fontWeight: '600',
+      color: '#333'
+    },
+    skillPercentage: {
+      background: '#667eea',
       color: 'white',
-      padding: '0.4rem 1rem',
+      padding: '5px 15px',
       borderRadius: '20px',
       fontSize: '0.9rem',
       fontWeight: 'bold'
     },
-    progress: {
-      height: '12px',
-      borderRadius: '10px',
-      backgroundColor: '#e9ecef',
+    progressBar: {
       width: '100%',
-      margin: '0.5rem 0'
+      height: '10px',
+      background: '#e0e0e0',
+      borderRadius: '10px',
+      overflow: 'hidden'
     },
+    progressFill: (level) => ({
+      width: `${level}%`,
+      height: '100%',
+      background: 'linear-gradient(90deg, #667eea, #764ba2)',
+      borderRadius: '10px',
+      transition: 'width 0.3s ease'
+    }),
     otherSkillsTitle: {
+      textAlign: 'center',
       color: '#667eea',
       fontSize: '1.3rem',
       fontWeight: 'bold',
-      margin: '2rem 0 1.5rem',
-      textAlign: 'center'
+      margin: '40px 0 20px'
     },
-    listContainer: {
+    listsContainer: {
       display: 'flex',
       justifyContent: 'center',
-      gap: '2rem',
+      gap: '50px',
       flexWrap: 'wrap'
     },
-    list: {
-      textAlign: 'left',
-      listStyle: 'none',
-      padding: 0,
-      margin: 0,
+    listColumn: {
       minWidth: '250px'
     },
+    list: {
+      listStyle: 'none',
+      padding: 0,
+      margin: 0
+    },
     listItem: {
-      marginBottom: '1rem',
+      marginBottom: '12px',
       fontSize: '1rem',
       color: '#555',
       display: 'flex',
       alignItems: 'center',
-      gap: '0.5rem'
+      gap: '8px'
+    },
+    checkIcon: {
+      color: '#667eea',
+      fontSize: '1.2rem'
     }
   }
 
   return (
-    <Container style={styles.container}>
-      <Row style={styles.row}>
-        <Col md={10} style={styles.col}>
-          <Card style={styles.card}>
-            <Card.Body>
-              {/* Badge */}
-              <div style={styles.badgeContainer}>
-                <span style={styles.badge}>MY SKILLS</span>
-              </div>
-              
-              {/* Section Title */}
-              <div style={styles.titleContainer}>
-                <h2 style={styles.sectionTitle}>
-                  Technical Expertise
-                </h2>
-              </div>
-              
-              {/* Skills List */}
-              <div style={styles.skillsContainer}>
-                {skills.map((skill, index) => (
-                  <div key={index} style={styles.skillItem}>
-                    <div style={styles.skillHeader}>
-                      <div style={styles.skillName}>
-                        <span>{skill.icon}</span>
-                        <strong>{skill.name}</strong>
-                      </div>
-                      <span style={styles.skillBadge}>{skill.level}%</span>
-                    </div>
-                    <ProgressBar 
-                      now={skill.level} 
-                      style={styles.progress}
-                    />
-                  </div>
-                ))}
-              </div>
+    <div style={styles.pageContainer}>
+      <div style={styles.mainCard}>
+        {/* Badge */}
+        <div style={styles.badgeContainer}>
+          <span style={styles.badge}>MY SKILLS</span>
+        </div>
 
-              {/* Other Skills Title */}
-              <h5 style={styles.otherSkillsTitle}>Other Skills & Tools</h5>
-              
-              {/* Other Skills Lists */}
-              <div style={styles.listContainer}>
-                <ul style={styles.list}>
-                  <li style={styles.listItem}>
-                    <span>✅</span> Git & GitHub
-                  </li>
-                  <li style={styles.listItem}>
-                    <span>✅</span> Bootstrap & React-Bootstrap
-                  </li>
-                  <li style={styles.listItem}>
-                    <span>✅</span> REST APIs
-                  </li>
-                </ul>
-                
-                <ul style={styles.list}>
-                  <li style={styles.listItem}>
-                    <span>✅</span> MySQL Database
-                  </li>
-                  <li style={styles.listItem}>
-                    <span>✅</span> Problem Solving
-                  </li>
-                  <li style={styles.listItem}>
-                    <span>✅</span> Team Collaboration
-                  </li>
-                </ul>
+        {/* Title */}
+        <h2 style={styles.title}>
+          Technical Expertise
+          <span style={styles.titleUnderline}></span>
+        </h2>
+
+        {/* Skills List */}
+        <div style={styles.skillsWrapper}>
+          {skills.map((skill, index) => (
+            <div key={index} style={styles.skillItem}>
+              <div style={styles.skillHeader}>
+                <div style={styles.skillLeft}>
+                  <span style={styles.skillIcon}>{skill.icon}</span>
+                  <span style={styles.skillName}>{skill.name}</span>
+                </div>
+                <span style={styles.skillPercentage}>{skill.level}%</span>
               </div>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+              <div style={styles.progressBar}>
+                <div style={styles.progressFill(skill.level)}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Other Skills Title */}
+        <h3 style={styles.otherSkillsTitle}>Other Skills & Tools</h3>
+
+        {/* Other Skills Lists */}
+        <div style={styles.listsContainer}>
+          <div style={styles.listColumn}>
+            <ul style={styles.list}>
+              <li style={styles.listItem}>
+                <span style={styles.checkIcon}>✅</span> Git & GitHub
+              </li>
+              <li style={styles.listItem}>
+                <span style={styles.checkIcon}>✅</span> Bootstrap & React-Bootstrap
+              </li>
+              <li style={styles.listItem}>
+                <span style={styles.checkIcon}>✅</span> REST APIs
+              </li>
+            </ul>
+          </div>
+          <div style={styles.listColumn}>
+            <ul style={styles.list}>
+              <li style={styles.listItem}>
+                <span style={styles.checkIcon}>✅</span> MySQL Database
+              </li>
+              <li style={styles.listItem}>
+                <span style={styles.checkIcon}>✅</span> Problem Solving
+              </li>
+              <li style={styles.listItem}>
+                <span style={styles.checkIcon}>✅</span> Team Collaboration
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
